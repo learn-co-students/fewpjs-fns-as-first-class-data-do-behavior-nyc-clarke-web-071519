@@ -1,11 +1,20 @@
-/* Given Code, don't edit */
-
 function handleClick(e) {
   const timeString = document.getElementById('time').value
   displayMessage(greet(timeString))
 }
 
-/* End Given Code, don't edit above here...*/
+function greet(time) {
+  const split = time.split(":")
+  if (split[0] < 12) {
+    return "Good Morning"
+  } else if (split[0] < 17){
+    return "Good Afternoon"
+  } else {
+    return "Good Evening"
+  }
+}
 
-/* Write your implementation of greet() */
-/* Write your implementation of displayMessage() */
+function displayMessage(string) {
+  time = document.querySelector('#greeting')
+  time.innerText = string
+}
